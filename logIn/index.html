@@ -11,6 +11,10 @@
       defer
     ></script>
     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link
       rel="shortcut icon"
       href="../assets/img/logotipos/2.svg"
       type="image/x-icon"
@@ -20,7 +24,7 @@
   <body class="bg-blanco min-h-[80vh] m-[80px]">
     <section class="flex justify-between min-h-[80vh]">
       <main class="w-[50%] bg-blanco h-[100%] pr-[8%]">
-        <article class="flex gap-[10px] items-center">
+        <article class="flex gap-[10px] items-center animate__animated animate__fadeInLeft" >
           <div>
             <img
               src="../assets/img/logotipos/1.svg"
@@ -36,7 +40,7 @@
             </p>
           </div>
         </article>
-        <article class="min-h-[480px] flex flex-col justify-center">
+        <article class="min-h-[480px] flex flex-col justify-center animate__animated animate__fadeInUp">
           <h2 class="text-[28px] font-semibold">Inicia sesión</h2>
           <p class="font-ligth text-[16px]">
             ¡Bienvenido nuevamente a esta comunidad como lo es Taurix.
@@ -62,11 +66,15 @@
               <i class="fa-solid fa-lock text-gris"></i>
               <input
                 type="password"
+                id="password-input"
                 class="w-full focus:outline-none focus:border-none font-medium"
                 placeholder="Salo***"
                 name="pass"
               />
-              <i class="fa-solid fa-eye text-gris"></i>
+              <i
+                id="toggle-password"
+                class="fa-solid fa-eye text-gris cursor-pointer"
+              ></i>
             </div>
 
             <div class="flex items-center space-x-3 mt-[10px]">
@@ -107,7 +115,8 @@
             </div>
 
             <button
-              class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 my-[20px]" type="submit"
+              class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 my-[20px]"
+              type="submit"
             >
               <span class="text-sm">Iniciar App</span>
               <div
@@ -119,10 +128,18 @@
           </form>
         </article>
       </main>
-      <main class="bg-rojo flex justify-center items-center w-[50%] rounded-xl p-[5%]">
-        <article class="bg-negro_fuerte rounded-xl text-center flex flex-col items-center text-blanco text-[25px] p-[40px]">
+      <main
+        class="bg-rojo flex justify-center items-center w-[50%] rounded-xl p-[5%] animate__animated animate__fadeInRight"
+      >
+        <article
+          class="bg-negro_fuerte rounded-xl text-center flex flex-col items-center text-blanco text-[25px] p-[40px]"
+        >
           <p>¡Hola, soy Meilan! Bot de Taurus CO</p>
-          <img src="../assets/img/logotipos/essential.png" alt="logo" width="250px"/>
+          <img
+            src="../assets/img/logotipos/essential.png"
+            alt="logo"
+            width="250px"
+          />
           <p>Eres el Taurix #1 de nuestra excelente comunidad.</p>
         </article>
       </main>
@@ -130,4 +147,5 @@
   </body>
 
   <script src="../assets/js/tailwind.config.js"></script>
+  <script src="../assets/js/main.js"></script>
 </html>
