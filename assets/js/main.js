@@ -221,7 +221,7 @@ const frases = [
 ];
 
 
-const diaActual = new Date().getDay(); // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
+const diaActual = new Date().getDay();
 const frasesDia = frases.slice(diaActual * 5, diaActual * 5 + 5); // 5 frases por día
 const fraseSeleccionada = frasesDia[Math.floor(Math.random() * frasesDia.length)];
 document.getElementById('fraseDia').textContent = fraseSeleccionada;

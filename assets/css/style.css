@@ -17,6 +17,11 @@
   font-family: "Quicksand", sans-serif;
 }
 
+*::selection{
+  background: var(--rojo);
+  color: var(--blanco);
+}
+
 .custom-scrollbar::-webkit-scrollbar{
   width: 3px;
 }
@@ -154,6 +159,7 @@
   pointer-events: auto;
   transform: translateY(50%);
   transition: all 0.4s ease;
+  z-index: 999999;
 }
 .sidebar-nav .secondary-nav {
   position: absolute;
