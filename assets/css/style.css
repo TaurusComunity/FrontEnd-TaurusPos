@@ -17,6 +17,16 @@
   font-family: "Quicksand", sans-serif;
 }
 
+.custom-scrollbar::-webkit-scrollbar{
+  width: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--rojo);
+}
+.custom-scrollbar::-webkit-scrollbar-track{
+  background-color: transparent;
+}
 .number {
   font-family: "Lexend", sans-serif;
 }
@@ -221,7 +231,7 @@
   background: var(--azul_oscuro_opacidad);
   opacity: 2px;
   border-radius: 16px;
-  margin: 10px;
+  margin: 5px;
   border: 2px solid var(--blanco_opacidad);
 }
 .div2 {
@@ -229,7 +239,7 @@
   background: var(--azul_oscuro_opacidad);
   opacity: 20px;
   border-radius: 16px;
-  margin: 10px;
+  margin: 5px;
   border: 2px solid var(--blanco_opacidad);
 }
 .div3 {
@@ -237,7 +247,7 @@
   background: var(--azul_oscuro_opacidad);
   opacity: 20px;
   border-radius: 16px;
-  margin: 10px;
+  margin: 5px;
   border: 2px solid var(--blanco_opacidad);
 }
 .div4 {
@@ -245,7 +255,7 @@
   background: var(--azul_oscuro_opacidad);
   opacity: 20px;
   border-radius: 16px;
-  margin: 10px;
+  margin: 5px;
   border: 2px solid var(--blanco_opacidad);
 }
 .div5 {
@@ -253,7 +263,7 @@
   background: var(--azul_oscuro_opacidad);
   opacity: 20px;
   border-radius: 16px;
-  margin: 10px;
+  margin: 5px;
   border: 2px solid var(--blanco_opacidad);
 }
 .div6 {
@@ -261,6 +271,6 @@
   background: var(--azul_oscuro_opacidad);
   opacity: 20px;
   border-radius: 16px;
-  margin: 10px;
+  margin: 5px;
   border: 2px solid var(--blanco_opacidad);
 }
