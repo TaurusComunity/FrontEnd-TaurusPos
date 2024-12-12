@@ -244,33 +244,74 @@
 }
 .div3 {
   grid-area: 4 / 2 / 6 / 3;
-  background: var(--azul_oscuro_opacidad);
-  opacity: 20px;
+  background-image: url('../img/productos.jpg');
+  background-size: cover;
   border-radius: 16px;
   margin: 5px;
   border: 2px solid var(--blanco_opacidad);
+  transition:all ease .5ms;
+
 }
 .div4 {
   grid-area: 4 / 3 / 6 / 4;
-  background: var(--azul_oscuro_opacidad);
-  opacity: 20px;
+  background-image: url('../img/mesas.webp');
+  background-size: cover;
   border-radius: 16px;
   margin: 5px;
   border: 2px solid var(--blanco_opacidad);
+  transition:all ease .5ms;
+
 }
 .div5 {
   grid-area: 4 / 4 / 6 / 5;
-  background: var(--azul_oscuro_opacidad);
-  opacity: 20px;
+  background-image: url('../img/caja.webp');
+  background-size: cover;
+  border-radius: 16px;
+  margin: 5px;
+  border: 2px solid var(--blanco_opacidad);
+  transition:all ease .5ms;
+
+}
+.div6 {
+  grid-area: 1 / 2 / 4 / 5;
+  background-image: url('../img/vender.webp');
+  background-size: cover;
   border-radius: 16px;
   margin: 5px;
   border: 2px solid var(--blanco_opacidad);
 }
-.div6 {
-  grid-area: 1 / 2 / 4 / 5;
-  background: var(--azul_oscuro_opacidad);
-  opacity: 20px;
-  border-radius: 16px;
-  margin: 5px;
+
+.blur-container {
+  position: relative;
+  background: #0000003f;
+  border-radius: 8px;
+  overflow: hidden;
   border: 2px solid var(--blanco_opacidad);
+  transition:all ease .5ms;
+}
+
+.blur-container:hover{
+  background: var(--negro_fuerte);
+  transform:translateY(-5px) ;
+
+}
+
+.blur-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.171);
+  backdrop-filter: blur(6.7px); 
+  -webkit-backdrop-filter: blur(6.7px);
+  z-index: 1;
+  transition:all ease .5ms;
+}
+
+.content {
+  position: relative;
+  z-index: 10; 
+  transition:all ease .5ms;
 }
