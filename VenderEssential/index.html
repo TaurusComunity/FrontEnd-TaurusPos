@@ -102,7 +102,99 @@
     </aside>
 
     <div class="parentVender">
-      <div class="vender1 animate__animated animate__fadeInDown">1</div>
+      <div class="vender1 animate__animated animate__fadeInDown">
+        <div class="flex justify-between items-center gap-[5px] w-full">
+          <div
+            class="w-[70%] transition-all rounded-lg border-[2px] border-blanco_opacidad p-[5px] flex items-center gap-[8px]"
+          >
+            <input
+              type="search"
+              id="buscador"
+              class="w-full focus:outline-none focus:border-none font-medium bg-negro_fuerte text-blanco"
+              placeholder="Buscar producto..."
+              name="producto"
+            />
+            <i class="fa-solid fa-search text-gris cursor-pointer"></i>
+          </div>
+          <button
+            class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20"
+            type="submit"
+          >
+            <span class="text-sm">Nueva orden</span>
+            <div
+              class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]"
+            >
+              <div class="relative h-full w-10 bg-white/20"></div>
+            </div>
+          </button>
+        </div>
+
+        <nav class="text-blanco my-[10px]">
+          <ul>
+            <li>
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Inicio</a
+              >
+              <span class="material-symbols-rounded text-[10px]"
+                >arrow_forward_ios</span
+              >
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Vender productos</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <h2 class="text-blanco text-[30px] font-semibold">Taurus CO Menú</h2>
+
+        <div class="flex items-center gap-[10px] my-[10px]">
+          <div class="checkbox-wrapper-16">
+            <label class="checkbox-wrapper">
+              <input class="checkbox-input" type="checkbox" />
+              <span class="checkbox-tile">
+                <span class="checkbox-label">Todo</span>
+              </span>
+            </label>
+          </div>
+          <div class="checkbox-wrapper-16">
+            <label class="checkbox-wrapper">
+              <input class="checkbox-input" type="checkbox" />
+              <span class="checkbox-tile">
+                <span class="checkbox-label">Bebidas</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-[20px] w-full">
+          <div id="grid-container" class="grid grid-cols-3 gap-4">
+            <!-- Los cuadrados se generan dinámicamente aquí -->
+          </div>
+
+          <div class="flex flex-col justify-center items-center">
+            <div class="flex justify-center items-center gap-[20px]">
+              <button
+                id="prev-button"
+                class="w-[25px] h-[25px] p-[5px] bg-rojo text-white rounded-full disabled:opacity-50 flex justify-center items-center"
+              >
+                <span class="material-symbols-rounded text-[20px]"
+                  >arrow_left</span
+                >
+              </button>
+              <button
+                id="next-button"
+                class="w-[25px] h-[25px] p-[5px] bg-rojo text-white rounded-full disabled:opacity-50 flex justify-center items-center"
+              >
+                <span class="material-symbols-rounded text-[20px]"
+                  >arrow_right</span
+                >
+              </button>
+            </div>
+
+            <span id="page-indicator" class="text-gray-700"></span>
+          </div>
+        </div>
+      </div>
       <div
         class="vender2 text-blanco p-[12px] animate__animated animate__fadeInUp"
       >
@@ -120,190 +212,302 @@
           width="100%"
           height="200px"
           alt="facturador"
-          class="my-[12px] rounded-sm"
+          class="my-[12px] rounded-sm h-[150px] w-[100%]"
         />
 
         <div>
           <p class="text-[18px]">Resumen de la venta</p>
 
-          <div class="h-[220px] max-h-[1200px] px-[10px] overflow-x-auto custom-scrollbar" id="facturacion">
-            <div class="flex justify-between items-center gap-[8px] mt-[16px] ">
-                <div class="flex items-center gap-[5px]">
-                  <span id="cantidad" class="number">X1</span>
-                  <div
-                    class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                  >
-                    <img
-                      src="../assets/img/productos.jpg"
-                      alt="img producto"
-                      width="25px"
-                      height="25px"
-                      class="rounded-[100%] h-[25px] w-[25px]"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                      <p>Hamburguesa</p>
-                      <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                  </div>
+          <div
+            class="h-[100%] px-[10px] overflow-x-auto custom-scrollbar"
+            id="facturacion"
+          >
+            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+              <div class="flex items-center gap-[5px]">
+                <span id="cantidad" class="number">X1</span>
+                <div
+                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/img/productos.jpg"
+                    alt="img producto"
+                    width="25px"
+                    height="25px"
+                    class="rounded-[100%] h-[25px] w-[25px]"
+                  />
                 </div>
-    
-                <p class="number">$18.800</p>
+                <div class="flex flex-col">
+                  <p>Hamburguesa</p>
+                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                </div>
+              </div>
+
+              <p class="number">$18.800</p>
             </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px] ">
-                <div class="flex items-center gap-[5px]">
-                  <span id="cantidad" class="number">X1</span>
-                  <div
-                    class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                  >
-                    <img
-                      src="../assets/img/productos.jpg"
-                      alt="img producto"
-                      width="25px"
-                      height="25px"
-                      class="rounded-[100%] h-[25px] w-[25px]"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                      <p>Hamburguesa</p>
-                      <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                  </div>
+            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+              <div class="flex items-center gap-[5px]">
+                <span id="cantidad" class="number">X1</span>
+                <div
+                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/img/productos.jpg"
+                    alt="img producto"
+                    width="25px"
+                    height="25px"
+                    class="rounded-[100%] h-[25px] w-[25px]"
+                  />
                 </div>
-    
-                <p class="number">$18.800</p>
+                <div class="flex flex-col">
+                  <p>Hamburguesa</p>
+                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                </div>
+              </div>
+
+              <p class="number">$18.800</p>
             </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px] ">
-                <div class="flex items-center gap-[5px]">
-                  <span id="cantidad" class="number">X1</span>
-                  <div
-                    class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                  >
-                    <img
-                      src="../assets/img/productos.jpg"
-                      alt="img producto"
-                      width="25px"
-                      height="25px"
-                      class="rounded-[100%] h-[25px] w-[25px]"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                      <p>Hamburguesa</p>
-                      <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                  </div>
+            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+              <div class="flex items-center gap-[5px]">
+                <span id="cantidad" class="number">X1</span>
+                <div
+                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/img/productos.jpg"
+                    alt="img producto"
+                    width="25px"
+                    height="25px"
+                    class="rounded-[100%] h-[25px] w-[25px]"
+                  />
                 </div>
-    
-                <p class="number">$18.800</p>
+                <div class="flex flex-col">
+                  <p>Hamburguesa</p>
+                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                </div>
+              </div>
+
+              <p class="number">$18.800</p>
             </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px] ">
-                <div class="flex items-center gap-[5px]">
-                  <span id="cantidad" class="number">X1</span>
-                  <div
-                    class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                  >
-                    <img
-                      src="../assets/img/productos.jpg"
-                      alt="img producto"
-                      width="25px"
-                      height="25px"
-                      class="rounded-[100%] h-[25px] w-[25px]"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                      <p>Hamburguesa</p>
-                      <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                  </div>
+            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+              <div class="flex items-center gap-[5px]">
+                <span id="cantidad" class="number">X1</span>
+                <div
+                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/img/productos.jpg"
+                    alt="img producto"
+                    width="25px"
+                    height="25px"
+                    class="rounded-[100%] h-[25px] w-[25px]"
+                  />
                 </div>
-    
-                <p class="number">$18.800</p>
+                <div class="flex flex-col">
+                  <p>Hamburguesa</p>
+                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                </div>
+              </div>
+
+              <p class="number">$18.800</p>
             </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px] ">
-                <div class="flex items-center gap-[5px]">
-                  <span id="cantidad" class="number">X1</span>
-                  <div
-                    class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                  >
-                    <img
-                      src="../assets/img/productos.jpg"
-                      alt="img producto"
-                      width="25px"
-                      height="25px"
-                      class="rounded-[100%] h-[25px] w-[25px]"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                      <p>Hamburguesa</p>
-                      <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                  </div>
+            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+              <div class="flex items-center gap-[5px]">
+                <span id="cantidad" class="number">X1</span>
+                <div
+                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/img/productos.jpg"
+                    alt="img producto"
+                    width="25px"
+                    height="25px"
+                    class="rounded-[100%] h-[25px] w-[25px]"
+                  />
                 </div>
-    
-                <p class="number">$18.800</p>
+                <div class="flex flex-col">
+                  <p>Hamburguesa</p>
+                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                </div>
+              </div>
+
+              <p class="number">$18.800</p>
             </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px] ">
-                <div class="flex items-center gap-[5px]">
-                  <span id="cantidad" class="number">X1</span>
-                  <div
-                    class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                  >
-                    <img
-                      src="../assets/img/productos.jpg"
-                      alt="img producto"
-                      width="25px"
-                      height="25px"
-                      class="rounded-[100%] h-[25px] w-[25px]"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                      <p>Hamburguesa</p>
-                      <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                  </div>
+            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+              <div class="flex items-center gap-[5px]">
+                <span id="cantidad" class="number">X1</span>
+                <div
+                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/img/productos.jpg"
+                    alt="img producto"
+                    width="25px"
+                    height="25px"
+                    class="rounded-[100%] h-[25px] w-[25px]"
+                  />
                 </div>
-    
-                <p class="number">$18.800</p>
+                <div class="flex flex-col">
+                  <p>Hamburguesa</p>
+                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                </div>
+              </div>
+
+              <p class="number">$18.800</p>
             </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px] ">
-                <div class="flex items-center gap-[5px]">
-                  <span id="cantidad" class="number">X1</span>
-                  <div
-                    class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                  >
-                    <img
-                      src="../assets/img/productos.jpg"
-                      alt="img producto"
-                      width="25px"
-                      height="25px"
-                      class="rounded-[100%] h-[25px] w-[25px]"
-                    />
-                  </div>
-                  <div class="flex flex-col">
-                      <p>Hamburguesa</p>
-                      <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                  </div>
+            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
+              <div class="flex items-center gap-[5px]">
+                <span id="cantidad" class="number">X1</span>
+                <div
+                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
+                >
+                  <img
+                    src="../assets/img/productos.jpg"
+                    alt="img producto"
+                    width="25px"
+                    height="25px"
+                    class="rounded-[100%] h-[25px] w-[25px]"
+                  />
                 </div>
-    
-                <p class="number">$18.800</p>
+                <div class="flex flex-col">
+                  <p>Hamburguesa</p>
+                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
+                </div>
+              </div>
+
+              <p class="number">$18.800</p>
             </div>
           </div>
 
           <div class="flex justify-between items-center px-[12px] text-[20px]">
-            <p>Total:</p><span id="total" class="number">$ 0</span>
+            <p>Total:</p>
+            <span id="total" class="number">$ 0</span>
           </div>
           <div class="flex justify-center items-center">
-              <button
-                  class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 my-[20px]"
-                  type="submit"
-                >
-                  <span class="text-sm">Finalizar orden</span>
-                  <div
-                    class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]"
-                  >
-                    <div class="relative h-full w-10 bg-white/20"></div>
-                  </div>
-                </button>
+            <button
+              class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 my-[20px]"
+              type="submit"
+            >
+              <span class="text-sm">Finalizar orden</span>
+              <div
+                class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]"
+              >
+                <div class="relative h-full w-10 bg-white/20"></div>
+              </div>
+            </button>
           </div>
-          
         </div>
       </div>
     </div>
     <script src="../assets/js/tailwind.config.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script>
+      // Datos: una lista de productos simulados con propiedades personalizadas
+      const items = Array.from({ length: 20 }, (_, i) => ({
+        name: `Producto ${i + 1}`,
+        description: "Plato fuerte",
+        image: "../assets/img/pasta.jpg",
+        price: 18000 + i * 1000, // Precio dinámico
+        quantity: 1, // Cantidad inicial
+      }));
+
+      // Variables de paginación
+      const itemsPerPage = 6;
+      let currentPage = 1;
+
+      // Elementos del DOM
+      const gridContainer = document.getElementById("grid-container");
+      const prevButton = document.getElementById("prev-button");
+      const nextButton = document.getElementById("next-button");
+      const pageIndicator = document.getElementById("page-indicator");
+
+      // Función para renderizar los productos
+      function renderPage(page) {
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const pageItems = items.slice(start, end);
+
+        // Limpiar el contenedor
+        gridContainer.innerHTML = "";
+
+        // Agregar los elementos
+        pageItems.forEach((item) => {
+          // Crear el contenedor principal
+          const div = document.createElement("div");
+          div.className = "rounded-[16px] p-2 text-white";
+
+          // Insertar la estructura HTML
+          div.innerHTML = `
+      <img src="${item.image}" alt="${
+            item.name
+          }" class="w-full h-[150px] object-cover rounded-[8px] mb-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <h4 class="font-semibold text-[18px]">${item.name}</h4>
+          <p class="font-light -mt-[8px]">${item.description}</p>
+        </div>
+        <div class="flex justify-center items-center rounded-sm border-[2px] border-blanco_opacidad w-[15px] h-[15px] p-[10px]">
+          <span class="number">8</span>
+        </div>
+      </div>
+      <div class="flex justify-between items-center">
+        <h5 class="number text-[22px] font-semibold">$ ${item.price.toLocaleString()}</h5>
+        <div class="flex items-center justify-center gap-2 p-[7px] border-[2px] border-blanco_opacidad h-full w-[80px] rounded-full">
+          <button class="bg-rojo text-blanco px-2 py-1 rounded-full w-[20px] h-[20px] decrease flex justify-center items-center">
+            <span class="material-symbols-rounded text-[20px] decrease">remove</span>
+          </button>
+          <span class="quantity number">${item.quantity}</span>
+          <button class="bg-rojo text-blanco px-2 py-1 rounded-full w-[20px] h-[20px] increase flex justify-center items-center">
+            <span class="material-symbols-rounded text-[20px] increase">add</span>
+          </button>
+        </div>
+      </div>
+    `;
+
+          gridContainer.appendChild(div);
+        });
+
+        // Actualizar el indicador de página
+        pageIndicator.textContent = `Página ${page}`;
+        prevButton.disabled = page === 1;
+        nextButton.disabled = page === Math.ceil(items.length / itemsPerPage);
+      }
+
+      // Eventos de los botones
+      prevButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          renderPage(currentPage);
+        }
+      });
+
+      nextButton.addEventListener("click", () => {
+        if (currentPage < Math.ceil(items.length / itemsPerPage)) {
+          currentPage++;
+          renderPage(currentPage);
+        }
+      });
+
+      // Incrementar y disminuir cantidad
+      document.querySelectorAll(".increase").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const quantityElement = e.target.previousElementSibling;
+          quantityElement.textContent =
+            parseInt(quantityElement.textContent) + 1;
+        });
+      });
+
+      document.querySelectorAll(".decrease").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const quantityElement = e.target.nextElementSibling;
+          const currentValue = parseInt(quantityElement.textContent);
+          if (currentValue > 1) {
+            quantityElement.textContent = currentValue - 1;
+          }
+        });
+      });
+
+      // Inicializar la primera página
+      renderPage(currentPage);
+    </script>
   </body>
 </html>
