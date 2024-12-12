@@ -466,48 +466,56 @@
           gridContainer.appendChild(div);
         });
 
-        // Actualizar el indicador de página
-        pageIndicator.textContent = `Página ${page}`;
-        prevButton.disabled = page === 1;
-        nextButton.disabled = page === Math.ceil(items.length / itemsPerPage);
-      }
+          // Agregar eventos a los botones de incremento y decremento
+  addEventListeners();
 
-      // Eventos de los botones
-      prevButton.addEventListener("click", () => {
-        if (currentPage > 1) {
-          currentPage--;
-          renderPage(currentPage);
-        }
-      });
+// Actualizar el indicador de página
+pageIndicator.textContent = `Página ${page}`;
+prevButton.disabled = page === 1;
+nextButton.disabled = page === Math.ceil(items.length / itemsPerPage);
+}
 
-      nextButton.addEventListener("click", () => {
-        if (currentPage < Math.ceil(items.length / itemsPerPage)) {
-          currentPage++;
-          renderPage(currentPage);
-        }
-      });
+// Función para agregar eventos dinámicos
+function addEventListeners() {
+const increaseButtons = document.querySelectorAll(".increase");
+const decreaseButtons = document.querySelectorAll(".decrease");
 
-      // Incrementar y disminuir cantidad
-      document.querySelectorAll(".increase").forEach((button) => {
-        button.addEventListener("click", (e) => {
-          const quantityElement = e.target.previousElementSibling;
-          quantityElement.textContent =
-            parseInt(quantityElement.textContent) + 1;
-        });
-      });
+increaseButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const index = e.currentTarget.getAttribute("data-index");
+    items[index].quantity++;
+    renderPage(currentPage); // Volver a renderizar para actualizar la cantidad
+  });
+});
 
-      document.querySelectorAll(".decrease").forEach((button) => {
-        button.addEventListener("click", (e) => {
-          const quantityElement = e.target.nextElementSibling;
-          const currentValue = parseInt(quantityElement.textContent);
-          if (currentValue > 1) {
-            quantityElement.textContent = currentValue - 1;
-          }
-        });
-      });
+decreaseButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const index = e.currentTarget.getAttribute("data-index");
+    if (items[index].quantity > 1) {
+      items[index].quantity--;
+      renderPage(currentPage); // Volver a renderizar para actualizar la cantidad
+    }
+  });
+});
+}
 
-      // Inicializar la primera página
-      renderPage(currentPage);
+// Eventos de los botones de navegación
+prevButton.addEventListener("click", () => {
+if (currentPage > 1) {
+  currentPage--;
+  renderPage(currentPage);
+}
+});
+
+nextButton.addEventListener("click", () => {
+if (currentPage < Math.ceil(items.length / itemsPerPage)) {
+  currentPage++;
+  renderPage(currentPage);
+}
+});
+
+// Inicializar la primera página
+renderPage(currentPage);
     </script>
   </body>
 </html>
