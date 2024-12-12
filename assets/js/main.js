@@ -140,3 +140,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateCalendar(currentDate);
 });
+
+
+// Obtener la referencia al elemento de saludo
+const saludoElement = document.getElementById('saludo');
+
+// Obtener la hora actual
+const now = new Date();
+const hours = now.getHours();
+
+// Determinar el saludo según la hora
+let saludo;
+if (hours >= 5 && hours < 12) {
+    saludo = "¡Buenos días!,";
+} else if (hours >= 12 && hours < 18) {
+    saludo = "¡Buenas tardes!,";
+} else {
+    saludo = "¡Buenas noches!,";
+}
+
+// Actualizar el contenido del saludo
+saludoElement.textContent = saludo;
