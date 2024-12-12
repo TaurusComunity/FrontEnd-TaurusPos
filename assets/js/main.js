@@ -161,3 +161,73 @@ if (hours >= 5 && hours < 12) {
 
 // Actualizar el contenido del saludo
 saludoElement.textContent = saludo;
+
+
+// Frases motivadoras para cada día
+const frases = [
+  // Lunes
+  "¡Nuevo lunes, nueva oportunidad de brillar! 🌟",
+  "¡Comienza la semana con fuerza y determinación! 💪",
+  "¡El éxito de esta semana empieza hoy! 🚀",
+  "¡Haz que este lunes sea legendario! 🔥",
+  "¡Hoy es el primer paso hacia tus metas! 🏆",
+  // Martes
+  "¡Martes, el día perfecto para avanzar! 🏃‍♂️",
+  "¡Sigue construyendo tus sueños! 🌈",
+  "¡Hoy es tu oportunidad para destacar! ✨",
+  "¡Martes de energía, mantén el ritmo! ⚡",
+  "¡Nada puede detenerte hoy, sigue adelante! 🛤️",
+  // Miércoles
+  "¡Mitad de semana, pero todavía hay mucho por lograr! 🚧",
+  "¡Este miércoles está lleno de posibilidades! 🌟",
+  "¡Un paso más cerca de tus objetivos! 🏔️",
+  "¡Cada pequeño esfuerzo suma al éxito! 🎯",
+  "¡Es miércoles, sigue construyendo tu futuro! 🏗️",
+  // Jueves
+  "¡El fin de semana se acerca, pero no bajes la guardia! 💼",
+  "¡Hoy es el día para dar lo mejor de ti! 🔥",
+  "¡Jueves de oportunidades, no las dejes pasar! 🌊",
+  "¡La constancia siempre trae recompensas! 🥇",
+  "¡Este jueves, el esfuerzo marca la diferencia! 🛠️",
+  // Viernes
+  "¡El viernes es solo el inicio de tus logros! 🚀",
+  "¡Termina la semana con la misma fuerza con la que empezaste! 💪",
+  "¡Hoy puedes alcanzar grandes cosas! 🌟",
+  "¡Viernes, el día para celebrar tu esfuerzo! 🎉",
+  "¡Aprovecha el viernes, da ese último empujón! 🚴‍♂️",
+  // Sábado
+  "¡Sábado, el día perfecto para soñar y actuar! 🌞",
+  "¡Hoy es un buen día para seguir creciendo! 🌱",
+  "¡Sábado de energía y positividad! 🌈",
+  "¡El esfuerzo de hoy es la recompensa de mañana! 💼",
+  "¡Aprovecha este sábado para avanzar un paso más! ⏳",
+  // Domingo
+  "¡Domingo, tiempo de reflexionar y planificar! 📝",
+  "¡Recarga energías, mañana comienza otra gran semana! 🌟",
+  "¡El descanso también es parte del éxito! 🛌",
+  "¡Hoy es el día para prepararte para nuevos retos! 🛠️",
+  "¡Domingo, un momento para agradecer y avanzar! 🙏",
+  // Frases genéricas
+  "¡Cada día es una nueva oportunidad para ser mejor! 🌟",
+  "¡El límite está en tu mente, no en tus acciones! 🚀",
+  "¡Confía en ti, hoy será un gran día! 💪",
+  "¡Nunca es tarde para comenzar algo increíble! ✨",
+  "¡Haz que cada día cuente! 🎯",
+  "¡Tu actitud define tus resultados! 😎",
+  "¡Cada esfuerzo que haces vale la pena! 🥇",
+  "¡Persigue tus sueños, nunca dejes de intentarlo! 🌈",
+  "¡Hoy es el día perfecto para hacer historia! 📖",
+  "¡La clave del éxito está en no rendirse jamás! 🔑"
+];
+
+
+const diaActual = new Date().getDay(); // 0 = Domingo, 1 = Lunes, ..., 6 = Sábado
+const frasesDia = frases.slice(diaActual * 5, diaActual * 5 + 5); // 5 frases por día
+const fraseSeleccionada = frasesDia[Math.floor(Math.random() * frasesDia.length)];
+document.getElementById('fraseDia').textContent = fraseSeleccionada;
+
+frasesDiaElement.classList.remove('fade-in');
+setTimeout(() => {
+    frasesDiaElement.classList.add('fade-in');
+}, 50);
+

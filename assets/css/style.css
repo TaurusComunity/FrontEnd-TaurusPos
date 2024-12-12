@@ -274,8 +274,7 @@
 }
 .div6 {
   grid-area: 1 / 2 / 4 / 5;
-  background-image: url('../img/vender.webp');
-  background-size: cover;
+  background: var(--azul_oscuro_opacidad);
   border-radius: 16px;
   margin: 5px;
   border: 2px solid var(--blanco_opacidad);
@@ -314,4 +313,12 @@
   position: relative;
   z-index: 10; 
   transition:all ease .5ms;
+}
+
+#frasesDia {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+#frasesDia.fade-in {
+  opacity: 1;
 }
