@@ -231,3 +231,5 @@ setTimeout(() => {
     frasesDiaElement.classList.add('fade-in');
 }, 50);
 
+
+

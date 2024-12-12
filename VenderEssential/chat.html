@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product Carousel</title>
+    <style>
+        /* Ocultar carrusel adicional */
+        .carousel-item { display: none; }
+        .carousel-item.active { display: flex; }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div class="max-w-5xl mx-auto py-8">
+        <!-- Carrusel -->
+        <div id="carousel" class="relative">
+            <!-- Items -->
+            <div class="carousel-item active flex justify-center gap-4">
+                <!-- Producto 1 -->
+                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
+                    <img src="https://via.placeholder.com/300x200" alt="Churrasco" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Churrasco</h3>
+                    <p class="text-gray-400">Platos fuertes</p>
+                    <p class="text-xl font-bold">$25.500</p>
+                    <div class="flex items-center gap-2 mt-4">
+                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
+                        <span class="quantity">1</span>
+                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
+                    <img src="https://via.placeholder.com/300x200" alt="Cóctel Fresa" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Cóctel Fresa</h3>
+                    <p class="text-gray-400">Bebidas</p>
+                    <p class="text-xl font-bold">$17.000</p>
+                    <div class="flex items-center gap-2 mt-4">
+                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
+                        <span class="quantity">1</span>
+                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
+                    <img src="https://via.placeholder.com/300x200" alt="Hamburguesa" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Hamburguesa</h3>
+                    <p class="text-gray-400">Platos fuertes</p>
+                    <p class="text-xl font-bold">$10.800</p>
+                    <div class="flex items-center gap-2 mt-4">
+                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
+                        <span class="quantity">1</span>
+                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item adicional ejemplo -->
+            <div class="carousel-item flex justify-center gap-4">
+                <!-- Producto 4 -->
+                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
+                    <img src="https://via.placeholder.com/300x200" alt="Vino Tropical" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Vino Tropical</h3>
+                    <p class="text-gray-400">Bebidas</p>
+                    <p class="text-xl font-bold">$32.200</p>
+                    <div class="flex items-center gap-2 mt-4">
+                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
+                        <span class="quantity">1</span>
+                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
+                    </div>
+                </div>
+                <!-- Producto 5 -->
+                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
+                    <img src="https://via.placeholder.com/300x200" alt="Estofado Goulash" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Estofado Goulash</h3>
+                    <p class="text-gray-400">Platos fuertes</p>
+                    <p class="text-xl font-bold">$43.800</p>
+                    <div class="flex items-center gap-2 mt-4">
+                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
+                        <span class="quantity">1</span>
+                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
+                    </div>
+                </div>
+                <!-- Producto 6 -->
+                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
+                    <img src="https://via.placeholder.com/300x200" alt="Cerveza Inglesa" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Cerveza Inglesa</h3>
+                    <p class="text-gray-400">Bebidas</p>
+                    <p class="text-xl font-bold">$4.300</p>
+                    <div class="flex items-center gap-2 mt-4">
+                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
+                        <span class="quantity">1</span>
+                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles del carrusel -->
+            <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2">⬅</button>
+            <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2">➡</button>
+        </div>
+    </div>
+
+    <script>
+        // Funcionalidad del carrusel
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % items.length;
+            items[currentIndex].classList.add('active');
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            items[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            items[currentIndex].classList.add('active');
+        });
+
+        // Incrementar y disminuir cantidad
+        document.querySelectorAll('.increase').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const quantityElement = e.target.previousElementSibling;
+                quantityElement.textContent = parseInt(quantityElement.textContent) + 1;
+            });
+        });
+
+        document.querySelectorAll('.decrease').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const quantityElement = e.target.nextElementSibling;
+                const currentValue = parseInt(quantityElement.textContent);
+                if (currentValue > 1) {
+                    quantityElement.textContent = currentValue - 1;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -17,19 +17,19 @@
   font-family: "Quicksand", sans-serif;
 }
 
-*::selection{
+*::selection {
   background: var(--rojo);
   color: var(--blanco);
 }
 
-.custom-scrollbar::-webkit-scrollbar{
+.custom-scrollbar::-webkit-scrollbar {
   width: 3px;
 }
-.custom-scrollbar::-webkit-scrollbar-thumb{
+.custom-scrollbar::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: var(--rojo);
 }
-.custom-scrollbar::-webkit-scrollbar-track{
+.custom-scrollbar::-webkit-scrollbar-track {
   background-color: transparent;
 }
 .number {
@@ -250,33 +250,30 @@
 }
 .div3 {
   grid-area: 4 / 2 / 6 / 3;
-  background-image: url('../img/productos.jpg');
+  background-image: url("../img/productos.jpg");
   background-size: cover;
   border-radius: 16px;
   margin: 5px;
   border: 2px solid var(--blanco_opacidad);
-  transition:all ease .5ms;
-
+  transition: all ease 0.5ms;
 }
 .div4 {
   grid-area: 4 / 3 / 6 / 4;
-  background-image: url('../img/mesas.webp');
+  background-image: url("../img/mesas.webp");
   background-size: cover;
   border-radius: 16px;
   margin: 5px;
   border: 2px solid var(--blanco_opacidad);
-  transition:all ease .5ms;
-
+  transition: all ease 0.5ms;
 }
 .div5 {
   grid-area: 4 / 4 / 6 / 5;
-  background-image: url('../img/caja.webp');
+  background-image: url("../img/caja.webp");
   background-size: cover;
   border-radius: 16px;
   margin: 5px;
   border: 2px solid var(--blanco_opacidad);
-  transition:all ease .5ms;
-
+  transition: all ease 0.5ms;
 }
 .div6 {
   grid-area: 1 / 2 / 4 / 5;
@@ -292,33 +289,32 @@
   border-radius: 8px;
   overflow: hidden;
   border: 2px solid var(--blanco_opacidad);
-  transition:all ease .5ms;
+  transition: all ease 0.5ms;
 }
 
-.blur-container:hover{
+.blur-container:hover {
   background: var(--negro_fuerte);
-  transform:translateY(-5px) ;
-
+  transform: translateY(-5px);
 }
 
 .blur-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.171);
-  backdrop-filter: blur(6.7px); 
+  backdrop-filter: blur(6.7px);
   -webkit-backdrop-filter: blur(6.7px);
   z-index: 1;
-  transition:all ease .5ms;
+  transition: all ease 0.5ms;
 }
 
 .content {
   position: relative;
-  z-index: 10; 
-  transition:all ease .5ms;
+  z-index: 10;
+  transition: all ease 0.5ms;
 }
 
 #frasesDia {
@@ -327,4 +323,29 @@
 }
 #frasesDia.fade-in {
   opacity: 1;
+}
+
+.parentVender {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 0.5fr;
+  grid-template-rows: repeat(3, 1fr) 0.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+  margin: 16px 16px 16px 0;
+}
+
+.vender1 {
+  grid-area: 1 / 1 / 5 / 4;
+  border-radius: 16px;
+  margin: 5px;
+  border: 2px solid var(--blanco_opacidad);
+  transition: all ease 0.5ms;
+}
+.vender2 {
+  grid-area: 1 / 4 / 5 / 6;
+  border-radius: 16px;
+  margin: 5px;
+  border: 2px solid var(--blanco_opacidad);
+  transition: all ease 0.5ms;
 }
