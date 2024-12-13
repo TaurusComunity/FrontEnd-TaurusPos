@@ -244,138 +244,6 @@
 
               <p class="number">$18.800</p>
             </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
-              <div class="flex items-center gap-[5px]">
-                <span id="cantidad" class="number">X1</span>
-                <div
-                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/img/productos.jpg"
-                    alt="img producto"
-                    width="25px"
-                    height="25px"
-                    class="rounded-[100%] h-[25px] w-[25px]"
-                  />
-                </div>
-                <div class="flex flex-col">
-                  <p>Hamburguesa</p>
-                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                </div>
-              </div>
-
-              <p class="number">$18.800</p>
-            </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
-              <div class="flex items-center gap-[5px]">
-                <span id="cantidad" class="number">X1</span>
-                <div
-                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/img/productos.jpg"
-                    alt="img producto"
-                    width="25px"
-                    height="25px"
-                    class="rounded-[100%] h-[25px] w-[25px]"
-                  />
-                </div>
-                <div class="flex flex-col">
-                  <p>Hamburguesa</p>
-                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                </div>
-              </div>
-
-              <p class="number">$18.800</p>
-            </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
-              <div class="flex items-center gap-[5px]">
-                <span id="cantidad" class="number">X1</span>
-                <div
-                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/img/productos.jpg"
-                    alt="img producto"
-                    width="25px"
-                    height="25px"
-                    class="rounded-[100%] h-[25px] w-[25px]"
-                  />
-                </div>
-                <div class="flex flex-col">
-                  <p>Hamburguesa</p>
-                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                </div>
-              </div>
-
-              <p class="number">$18.800</p>
-            </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
-              <div class="flex items-center gap-[5px]">
-                <span id="cantidad" class="number">X1</span>
-                <div
-                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/img/productos.jpg"
-                    alt="img producto"
-                    width="25px"
-                    height="25px"
-                    class="rounded-[100%] h-[25px] w-[25px]"
-                  />
-                </div>
-                <div class="flex flex-col">
-                  <p>Hamburguesa</p>
-                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                </div>
-              </div>
-
-              <p class="number">$18.800</p>
-            </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
-              <div class="flex items-center gap-[5px]">
-                <span id="cantidad" class="number">X1</span>
-                <div
-                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/img/productos.jpg"
-                    alt="img producto"
-                    width="25px"
-                    height="25px"
-                    class="rounded-[100%] h-[25px] w-[25px]"
-                  />
-                </div>
-                <div class="flex flex-col">
-                  <p>Hamburguesa</p>
-                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                </div>
-              </div>
-
-              <p class="number">$18.800</p>
-            </div>
-            <div class="flex justify-between items-center gap-[8px] mt-[16px]">
-              <div class="flex items-center gap-[5px]">
-                <span id="cantidad" class="number">X1</span>
-                <div
-                  class="w-[30px] h-[30px] p-1 bg-blanco_opacidad rounded-[100%] flex items-center justify-center"
-                >
-                  <img
-                    src="../assets/img/productos.jpg"
-                    alt="img producto"
-                    width="25px"
-                    height="25px"
-                    class="rounded-[100%] h-[25px] w-[25px]"
-                  />
-                </div>
-                <div class="flex flex-col">
-                  <p>Hamburguesa</p>
-                  <p class="text-[10px] -mt-[3px]">Sin comentarios</p>
-                </div>
-              </div>
-
-              <p class="number">$18.800</p>
-            </div>
           </div>
 
           <div class="flex justify-between items-center px-[12px] text-[20px]">
@@ -384,6 +252,7 @@
           </div>
           <div class="flex justify-center items-center">
             <button
+              id="finalize-order-button"
               class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 my-[20px]"
               type="submit"
             >
@@ -397,12 +266,43 @@
           </div>
         </div>
       </div>
+
+      <!-- Modal Structure -->
+      <div
+        id="modal-overlay"
+        class="fixed inset-0 flex items-center justify-center bg-azul_oscuro_opacidad backdrop-blur-sm hidden z-50"
+      >
+        <div class="bg-negro_fuerte border-[2px] border-blanco_opacidad text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-md">
+            <div class="flex items-center gap-[6px] cursor-pointer" id="cancel-button">
+                <span class="material-symbols-rounded" >chevron_left</span>
+                <p>Volver</p>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <h5 class="text-[20px]">Orden #98979778</h5>
+                <div>
+                    <div class="flex items-center gap-[6px] text-[8px] cursor-pointer" id="">
+                        <p>Guardar PDF</p>
+                        <span class="material-symbols-rounded" >file_Save</span>
+                    </div>
+                </div>
+            </div>
+         
+          <div class="flex justify-start gap-4">
+            <button
+              id="confirm-button"
+              class="px-4 py-2 bg-rojo text-white rounded-md hover:bg-red-600"
+            >
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="../assets/js/tailwind.config.js" defer></script>
     <script src="../assets/js/main.js" defer></script>
     <script src="../assets/js/productos.js" defer></script>
-    <script>
-      
-    </script>
+    <script src="../assets/js/modales.js" defer></script>
+    <script></script>
   </body>
 </html>
