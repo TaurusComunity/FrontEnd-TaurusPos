@@ -272,28 +272,188 @@
         id="modal-overlay"
         class="fixed inset-0 flex items-center justify-center bg-azul_oscuro_opacidad backdrop-blur-sm hidden z-50"
       >
-        <div class="bg-negro_fuerte border-[2px] border-blanco_opacidad text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-md">
-            <div class="flex items-center gap-[6px] cursor-pointer" id="cancel-button">
-                <span class="material-symbols-rounded" >chevron_left</span>
-                <p>Volver</p>
+        <div
+          class="bg-negro_fuerte border-[2px] border-blanco_opacidad text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]"
+        >
+          <div
+            class="flex items-center gap-[3px] cursor-pointer"
+            id="cancel-button"
+          >
+            <span class="material-symbols-rounded">chevron_left</span>
+            <p class="text-[12px]">Volver</p>
+          </div>
+
+          <div class="flex items-center justify-between my-[10px]">
+            <h5 class="text-[20px]">Orden #98979778</h5>
+            <div>
+              <div
+                class="flex items-center gap-[6px] text-[8px] cursor-pointer"
+                id=""
+              >
+                <p>Guardar PDF</p>
+                <span class="material-symbols-rounded text-[15px]">file_Save</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between my-[10px]">
+            <h5 class="text-[16px]">Fecha de creación: Nov 29,2024</h5>
+            <div>
+              <div
+                class="flex items-center gap-[6px] -mt-[10px] text-[16px]"
+                id=""
+              >
+                <p>Mesa 5</p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="h-[2px] w-full" />
+
+          <div class="mt-[20px] flex justify-between gap-3 w-full">
+            <div class="w-[50%]">
+              <p class="my-[5px] text-[14px]">Método de pago:</p>
+              <div class="custom-select">
+                <select>
+                  <option>Selecciona un método</option>
+                  <option>Efectivo</option>
+                  <option>Nequi</option>
+                  <option>Daviplata</option>
+                  <option>Tarjeta</option>
+                </select>
+                <div class="select-arrow text-blanco"></div>
+              </div>
             </div>
 
-            <div class="flex items-center justify-between">
-                <h5 class="text-[20px]">Orden #98979778</h5>
-                <div>
-                    <div class="flex items-center gap-[6px] text-[8px] cursor-pointer" id="">
-                        <p>Guardar PDF</p>
-                        <span class="material-symbols-rounded" >file_Save</span>
-                    </div>
-                </div>
+            <div class="w-[50%]">
+              <p class="my-[5px] text-[14px]">Monto a pagar:</p>
+              <div
+                class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+              >
+                <span
+                  class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                  >payments</span
+                >
+
+                <input
+                  type="text"
+                  id="monto"
+                  class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                  placeholder=""
+                  name="monto"
+                />
+              </div>
             </div>
-         
+          </div>
+
+          <div class="mt-[10px] flex justify-between gap-3 w-full">
+            <div class="w-[50%]">
+              <p class="my-[5px] text-[14px]">Dinero recibido:</p>
+              <div
+                class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+              >
+                <span
+                  class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                  >payments</span
+                >
+
+                <input
+                  type="text"
+                  id="monto"
+                  class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                  placeholder=""
+                  name="monto"
+                />
+              </div>
+            </div>
+
+            <div class=" w-[50%]">
+              <p class="my-[5px] text-[14px]">Dinero a devolver:</p>
+              <div
+                class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+              >
+                <span
+                  class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                  >payments</span
+                >
+
+                <input
+                  type="text"
+                  id="monto"
+                  class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                  placeholder=""
+                  name="monto"
+                />
+              </div>
+            </div>
+            
+          </div>
+          <div class=" mt-[10px] w-[100%]">
+            <p class="my-[5px] text-[14px]">Comentario:</p>
+            <div
+              class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+            >
+              <span
+                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                >format_italic</span
+              >
+
+              <input
+                type="text"
+                id="monto"
+                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                placeholder=""
+                name="monto"
+              />
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-3 mt-[10px]">
+            <label class="group flex items-center cursor-pointer">
+              <input class="hidden peer" type="checkbox" />
+
+              <span
+                class="relative w-4 h-4 flex justify-center items-center bg-gray-100 border-2 border-gray-400 rounded-md shadow-md transition-all duration-500 peer-checked:border-rojo peer-checked:bg-rojo peer-hover:scale-105"
+              >
+                <span
+                  class="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100 rounded-md transition-all duration-500 peer-checked:animate-pulse"
+                ></span>
+
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  class="hidden w-5 h-5 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+
+              <span
+                class="ml-3 text-[12px] text-blanco font-medium transition-colors duration-300"
+              >
+                Imprimir recibo de compra.
+              </span>
+            </label>
+          </div>
+          
+
           <div class="flex justify-start gap-4">
             <button
               id="confirm-button"
-              class="px-4 py-2 bg-rojo text-white rounded-md hover:bg-red-600"
+              class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 mt-[20px]"
+              type="submit"
             >
-              Confirmar
+              <span class="text-sm">Confirmar orden</span>
+              <div
+                class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]"
+              >
+                <div class="relative h-full w-10 bg-white/20"></div>
+              </div>
             </button>
           </div>
         </div>
