@@ -304,7 +304,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.171); 
+  background: rgba(0, 0, 0, 0.171);
   backdrop-filter: blur(6.7px);
   -webkit-backdrop-filter: blur(6.7px);
   z-index: 1;
@@ -346,15 +346,14 @@
   grid-area: 1 / 4 / 5 / 6;
   border-radius: 16px;
   margin: 5px;
-  border: 2px solid var(--blanco_opacidad);
   transition: all ease 0.5ms;
+  border: 2px solid var(--blanco_opacidad);
   height: 100%;
 }
 
-
 .checkbox-wrapper-16 *,
-  .checkbox-wrapper-16 *:after,
-  .checkbox-wrapper-16 *:before {
+.checkbox-wrapper-16 *:after,
+.checkbox-wrapper-16 *:before {
   box-sizing: border-box;
 }
 
@@ -385,7 +384,7 @@
 }
 
 .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-icon,
-  .checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
+.checkbox-wrapper-16 .checkbox-input:checked + .checkbox-tile .checkbox-label {
   color: rojo;
 }
 
@@ -459,39 +458,71 @@
 }
 
 .custom-select {
-	position: relative;
+  position: relative;
 }
 
 .custom-select select {
-	appearance: none;
-	-webkit-appearance: none;
-	width: 100%;
-	font-size: 13px;
-	padding: 5px 10px 5px 10px;
-	background-color: var(--azul_oscuro_opacidad);
-	border: 1px solid var(--blanco_opacidad);
-	border-radius: 5px;
-	color: var(--blanco);
-	cursor: pointer;
-	outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  font-size: 13px;
+  padding: 5px 10px 5px 10px;
+  background-color: var(--azul_oscuro_opacidad);
+  border: 1px solid var(--blanco_opacidad);
+  border-radius: 5px;
+  color: var(--blanco);
+  cursor: pointer;
+  outline: none;
 }
 
 .custom-select select:focus {
-	background: var(--azul_oscuro_opacidad);
-	border: 1px solid var(--rojo);
-	border-radius: 8px;
+  background: var(--azul_oscuro_opacidad);
+  border: 1px solid var(--rojo);
+  border-radius: 8px;
 }
 
 .custom-select::after {
-	content: "";
-	position: absolute;
-	pointer-events: none;
-	top: 50%;
-	right: 10px;
-	transform: translate(0, -50%);
-	width: 12px;
-	height: 12px;
-	background-color: var(--blanco);
-	clip-path: polygon(8% 17%, 0% 25%, 50% 84%, 100% 25%, 92% 17%, 50% 65%);
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--blanco);
+  clip-path: polygon(8% 17%, 0% 25%, 50% 84%, 100% 25%, 92% 17%, 50% 65%);
 }
 
+.parentOver {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  margin: 16px 16px 16px 0;
+  }
+
+.div1Over {
+  grid-area: 1 / 1 / 6 / 3;
+  margin: 5px;
+  transition: all ease 0.5ms;
+}
+.div2Over {
+  grid-area: 1 / 3 / 3 / 5;
+  border: 1px solid var(--blanco_opacidad);
+  margin: 5px;
+  transition: all ease 0.5ms;
+}
+.div3Over {
+  grid-area: 3 / 3 / 5 / 5;
+  border: 1px solid var(--blanco_opacidad);
+  margin: 5px;
+  transition: all ease 0.5ms;
+}
+.div4Over {
+  grid-area: 5 / 3 / 6 / 5;
+  border: 1px solid var(--blanco_opacidad);
+  margin: 5px;
+  transition: all ease 0.5ms;
+}
