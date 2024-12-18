@@ -501,6 +501,8 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   margin: 16px 16px 16px 0;
+  transition: all ease 0.5ms;
+
   }
 
 .div1Over {
@@ -509,20 +511,19 @@
   transition: all ease 0.5ms;
 }
 .div2Over {
-  grid-area: 1 / 3 / 3 / 5;
+  grid-area: 5 / 3 / 6 / 5;
   border: 1px solid var(--blanco_opacidad);
   margin: 5px;
   transition: all ease 0.5ms;
 }
 .div3Over {
-  grid-area: 3 / 3 / 5 / 5;
+  grid-area: 2 / 3 / 5 / 5;
   border: 1px solid var(--blanco_opacidad);
   margin: 5px;
   transition: all ease 0.5ms;
 }
 .div4Over {
-  grid-area: 5 / 3 / 6 / 5;
-  border: 1px solid var(--blanco_opacidad);
+  grid-area: 1 / 3 / 2 / 5;
   margin: 5px;
   transition: all ease 0.5ms;
 }
