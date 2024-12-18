@@ -18,6 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  function mostrarHora() {
+    const horaElemento = document.getElementById('hora');
+    const ahora = new Date();
+  
+    // Formato 24h
+    const horas = String(ahora.getHours()).padStart(2, '0');
+    const minutos = String(ahora.getMinutes()).padStart(2, '0');
+    const segundos = String(ahora.getSeconds()).padStart(2, '0');
+  
+    // Actualizar el contenido del div
+    horaElemento.textContent = `${horas}:${minutos}:${segundos}`;
+  }
+  
+  // Actualizar cada segundo
+  setInterval(mostrarHora, 1000);
+  
+  // Mostrar la hora inmediatamente al cargar la página
+  mostrarHora();
+  
   const sidebar = document.querySelector(".sidebar");
   const sidebarToggler = document.querySelector(".sidebar-toggler");
   const menuToggler = document.querySelector(".menu-toggler");

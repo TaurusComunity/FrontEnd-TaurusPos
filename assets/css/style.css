@@ -512,14 +512,16 @@
 }
 .div2Over {
   grid-area: 5 / 3 / 6 / 5;
-  border: 1px solid var(--blanco_opacidad);
   margin: 5px;
   transition: all ease 0.5ms;
 }
 .div3Over {
   grid-area: 2 / 3 / 5 / 5;
   border: 1px solid var(--blanco_opacidad);
-  margin: 5px;
+  background: var(--azul_oscuro_opacidad);
+  border-radius: 20px;
+  margin: 10px;
+  padding: 15px;
   transition: all ease 0.5ms;
 }
 .div4Over {
