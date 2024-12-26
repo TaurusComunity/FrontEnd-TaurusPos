@@ -1,140 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Product Carousel</title>
-    <style>
-        /* Ocultar carrusel adicional */
-        .carousel-item { display: none; }
-        .carousel-item.active { display: flex; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distribución de Mesas Dinámica</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Estilos personalizados para la cuadrícula */
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      margin: 20px auto;
+    }
+    .grid-item {
+      border: 1px solid #ccc;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
-<body class="bg-black text-white">
-    <div class="max-w-5xl mx-auto py-8">
-        <!-- Carrusel -->
-        <div id="carousel" class="relative">
-            <!-- Items -->
-            <div class="carousel-item active flex justify-center gap-4">
-                <!-- Producto 1 -->
-                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
-                    <img src="https://via.placeholder.com/300x200" alt="Churrasco" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold">Churrasco</h3>
-                    <p class="text-gray-400">Platos fuertes</p>
-                    <p class="text-xl font-bold">$25.500</p>
-                    <div class="flex items-center gap-2 mt-4">
-                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
-                    </div>
-                </div>
-                <!-- Producto 2 -->
-                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
-                    <img src="https://via.placeholder.com/300x200" alt="Cóctel Fresa" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold">Cóctel Fresa</h3>
-                    <p class="text-gray-400">Bebidas</p>
-                    <p class="text-xl font-bold">$17.000</p>
-                    <div class="flex items-center gap-2 mt-4">
-                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
-                    </div>
-                </div>
-                <!-- Producto 3 -->
-                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
-                    <img src="https://via.placeholder.com/300x200" alt="Hamburguesa" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold">Hamburguesa</h3>
-                    <p class="text-gray-400">Platos fuertes</p>
-                    <p class="text-xl font-bold">$10.800</p>
-                    <div class="flex items-center gap-2 mt-4">
-                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
-                    </div>
-                </div>
-            </div>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
 
-            <!-- Item adicional ejemplo -->
-            <div class="carousel-item flex justify-center gap-4">
-                <!-- Producto 4 -->
-                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
-                    <img src="https://via.placeholder.com/300x200" alt="Vino Tropical" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold">Vino Tropical</h3>
-                    <p class="text-gray-400">Bebidas</p>
-                    <p class="text-xl font-bold">$32.200</p>
-                    <div class="flex items-center gap-2 mt-4">
-                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
-                    </div>
-                </div>
-                <!-- Producto 5 -->
-                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
-                    <img src="https://via.placeholder.com/300x200" alt="Estofado Goulash" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold">Estofado Goulash</h3>
-                    <p class="text-gray-400">Platos fuertes</p>
-                    <p class="text-xl font-bold">$43.800</p>
-                    <div class="flex items-center gap-2 mt-4">
-                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
-                    </div>
-                </div>
-                <!-- Producto 6 -->
-                <div class="bg-gray-900 p-4 rounded-lg w-[300px]">
-                    <img src="https://via.placeholder.com/300x200" alt="Cerveza Inglesa" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold">Cerveza Inglesa</h3>
-                    <p class="text-gray-400">Bebidas</p>
-                    <p class="text-xl font-bold">$4.300</p>
-                    <div class="flex items-center gap-2 mt-4">
-                        <button class="bg-red-500 text-white px-2 py-1 rounded decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="bg-green-500 text-white px-2 py-1 rounded increase">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controles del carrusel -->
-            <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2">⬅</button>
-            <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 px-4 py-2">➡</button>
-        </div>
+  <div class="p-4 bg-white rounded shadow-md w-full max-w-lg">
+    <!-- Formulario inicial -->
+    <h1 class="text-lg font-bold mb-4 text-center">Distribución de Mesas Dinámica</h1>
+    <div>
+      <label class="block font-semibold">¿Cuántas mesas tiene?</label>
+      <input type="number" id="numeroMesas" class="w-full p-2 border rounded mt-2" min="1" placeholder="Ej: 9">
+      <button onclick="crearMatriz()" class="bg-blue-500 text-white px-4 py-2 mt-4 rounded w-full">
+        Crear Matriz
+      </button>
     </div>
 
-    <script>
-        // Funcionalidad del carrusel
-        const items = document.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
+    <!-- Formulario dinámico -->
+    <div id="formularioMesas" class="mt-4 hidden">
+      <h2 class="font-semibold mb-2">Configurar Mesa</h2>
+      <label>Número de mesa:</label>
+      <input type="number" id="numMesa" class="w-full p-2 border rounded mt-1" placeholder="Ej: 1" min="1">
+      
+      <label class="mt-2 block">Capacidad:</label>
+      <input type="number" id="capacidadMesa" class="w-full p-2 border rounded mt-1" placeholder="Ej: 4" min="1">
 
-        document.getElementById('next').addEventListener('click', () => {
-            items[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % items.length;
-            items[currentIndex].classList.add('active');
-        });
+      <label class="mt-2 block">Ubicación (número de celda):</label>
+      <input type="number" id="ubicacionMesa" class="w-full p-2 border rounded mt-1" placeholder="Ej: 3" min="1">
 
-        document.getElementById('prev').addEventListener('click', () => {
-            items[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex - 1 + items.length) % items.length;
-            items[currentIndex].classList.add('active');
-        });
+      <button onclick="colocarMesa()" class="bg-green-500 text-white px-4 py-2 mt-4 rounded w-full">
+        Crear Mesa
+      </button>
+    </div>
 
-        // Incrementar y disminuir cantidad
-        document.querySelectorAll('.increase').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const quantityElement = e.target.previousElementSibling;
-                quantityElement.textContent = parseInt(quantityElement.textContent) + 1;
-            });
-        });
+    <!-- Contenedor de la matriz -->
+    <div id="matriz" class="grid-container mt-6"></div>
+  </div>
 
-        document.querySelectorAll('.decrease').forEach(button => {
-            button.addEventListener('click', (e) => {
-                const quantityElement = e.target.nextElementSibling;
-                const currentValue = parseInt(quantityElement.textContent);
-                if (currentValue > 1) {
-                    quantityElement.textContent = currentValue - 1;
-                }
-            });
-        });
-    </script>
+  <!-- Script JavaScript -->
+  <script>
+    let matriz = [];
+    let totalCeldas = 0;
+
+    // Función para crear la matriz automática
+    function crearMatriz() {
+      const numMesas = parseInt(document.getElementById("numeroMesas").value);
+
+      if (numMesas < 1) {
+        alert("Por favor, ingresa un número mayor a 0.");
+        return;
+      }
+
+      // Calcular el número de filas y columnas necesarias
+      const columnas = Math.ceil(Math.sqrt(numMesas));
+      const filas = Math.ceil(numMesas / columnas);
+
+      // Configurar la cuadrícula dinámica
+      const matrizDiv = document.getElementById("matriz");
+      matrizDiv.style.gridTemplateColumns = `repeat(${columnas}, 1fr)`;
+      matrizDiv.innerHTML = ""; // Limpiar la matriz anterior
+
+      // Crear la matriz vacía
+      matriz = [];
+      totalCeldas = filas * columnas;
+
+      for (let i = 0; i < totalCeldas; i++) {
+        matriz[i] = ""; // Inicializar cada celda vacía
+        const celda = document.createElement("div");
+        celda.classList.add("grid-item");
+        celda.id = `pos-${i}`;
+        celda.textContent = i + 1; // Numerar las celdas
+        matrizDiv.appendChild(celda);
+      }
+
+      // Mostrar el formulario dinámico
+      document.getElementById("formularioMesas").classList.remove("hidden");
+    }
+
+    // Función para colocar una mesa en la celda seleccionada
+    function colocarMesa() {
+      const numMesa = document.getElementById("numMesa").value;
+      const capacidad = document.getElementById("capacidadMesa").value;
+      const ubicacion = document.getElementById("ubicacionMesa").value - 1;
+
+      if (!numMesa || !capacidad || ubicacion < 0 || ubicacion >= totalCeldas) {
+        alert("Por favor, completa todos los campos correctamente.");
+        return;
+      }
+
+      // Verificar si la celda ya está ocupada
+      if (matriz[ubicacion] !== "") {
+        alert("Esta posición ya está ocupada. Elige otra.");
+        return;
+      }
+
+      // Actualizar la matriz y la celda seleccionada
+      matriz[ubicacion] = `Mesa ${numMesa} (${capacidad})`;
+      const celda = document.getElementById(`pos-${ubicacion}`);
+      celda.textContent = `Mesa ${numMesa}`;
+      celda.style.backgroundColor = "#90EE90"; // Color de celda ocupada
+
+      console.log("Matriz actualizada:", matriz);
+    }
+  </script>
+
 </body>
 </html>
