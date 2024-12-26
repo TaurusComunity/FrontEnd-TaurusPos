@@ -218,7 +218,7 @@
 
             <div class="flex items-center flex-wrap gap-1.5 w-full my-[15px] relative">
               <div class="border border-blanco rounded-lg w-full flex items-center">
-                <div class="absolute top-1 right-1 cursor-pointer">
+                <div class="absolute top-1 right-1 cursor-pointer" data-modal-target="modalInfoCategory">
                   <span class="material-symbols-rounded text-[20px]">
                     info
                     </span>
@@ -243,6 +243,139 @@
              
           </div>
         </div>
+
+         <!-- Modal Structure -->
+      <div
+      id="modalInfoCategory"
+      class="modal hidden fixed inset-0 flex items-center justify-center bg-azul_oscuro_opacidad backdrop-blur-sm hidden z-50"
+    >
+      <div
+        class="bg-negro_fuerte border-[2px] border-blanco_opacidad text-blanco p-6 rounded-lg shadow-lg w-[90%] min-w-[600px] max-w-[750px]"
+      >
+        <div
+          class="flex items-center gap-[3px] cursor-pointer"
+          data-modal-close
+        >
+          <span class="material-symbols-rounded">chevron_left</span>
+          <p class="text-[12px]">Volver</p>
+        </div>
+
+        <div class="flex items-center justify-between my-[10px]">
+          <h5 class="text-[20px]">Informacion de la categoria</h5>
+          <div>
+            <div
+              class="bg-azul_oscuro_opacidad p-2 rounded-md flex items-center gap-[2px] text-[14px] cursor-pointer"
+              id=""
+            >
+            <span class="material-symbols-rounded text-[20px]">edit_note</span>
+              <p>Editar</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between my-[10px]">
+          <h5 class="text-[16px]">Fecha de creación: Nov 29,2024</h5>
+          <div>
+            <div
+              class="flex items-center gap-[6px] -mt-[10px] text-[16px]"
+              id=""
+            >
+              <p>Creador: Jhoann</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="h-[2px] w-full" />
+
+        <div class="mt-[20px] flex justify-between gap-3 w-full">
+          
+          <div class="w-[50%]">
+            <p class="my-[5px] text-[14px]">Identificador:</p>
+            <div
+            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+            >
+              <span
+                class="material-symbols-rounded text-rojo text-[20px]"
+                >format_italic</span
+              >
+
+              <p>587854</p>
+            </div>
+          </div>
+          <div class="w-[50%]">
+            <p class="my-[5px] text-[14px]">Nombre categoria:</p>
+            <div
+              class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+            >
+              <span
+                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                >format_italic</span
+              >
+
+              <p>Platos fuertes</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[10px] flex justify-between gap-3 w-full">
+          <div class="w-[100%]">
+            <p class="my-[5px] text-[14px]">Descripcion</p>
+            <div
+              class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+            >
+              <span
+                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                >format_italic</span
+              >
+
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <h3 class="text-[18px] my-1">Subcategorias:</h3>
+        <div class="my-[5px] w-[100%] flex flex-wrap gap-2 items-center">
+          <div class="w-[auto] my-2">
+            <div
+              class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px] bg-azul_oscuro_opacidad"
+            >
+              <span
+                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                >texture_minus</span
+              >
+
+              <p class="pr-[5px]">Platos fuertes</p>
+            </div>
+          </div>
+          <div class="w-[auto] my-2">
+            <div
+              class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px] bg-azul_oscuro_opacidad"
+            >
+              <span
+                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                >texture_minus</span
+              >
+
+              <p class="pr-[5px]">Comida rapida</p>
+            </div>
+          </div>
+          <div class="w-[auto] my-1">
+            <div
+              class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px] bg-azul_oscuro_opacidad"
+            >
+              <span
+                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                >texture_minus</span
+              >
+
+              <p class="pr-[5px]">Comida Vegana y vegetariana</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
         </div>
 
    

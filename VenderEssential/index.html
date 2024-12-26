@@ -252,7 +252,7 @@
           </div>
           <div class="flex justify-center items-center">
             <button
-              id="finalize-order-button"
+              data-modal-target="modalOverlay"
               class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 my-[20px]"
               type="submit"
             >
@@ -269,15 +269,15 @@
 
       <!-- Modal Structure -->
       <div
-        id="modal-overlay"
-        class="fixed inset-0 flex items-center justify-center bg-azul_oscuro_opacidad backdrop-blur-sm hidden z-50"
+        id="modalOverlay"
+        class="modal hidden fixed inset-0 flex items-center justify-center bg-azul_oscuro_opacidad backdrop-blur-sm hidden z-50"
       >
         <div
           class="bg-negro_fuerte border-[2px] border-blanco_opacidad text-blanco p-6 rounded-lg shadow-lg w-[90%] max-w-[600px]"
         >
           <div
             class="flex items-center gap-[3px] cursor-pointer"
-            id="cancel-button"
+            data-modal-close
           >
             <span class="material-symbols-rounded">chevron_left</span>
             <p class="text-[12px]">Volver</p>
