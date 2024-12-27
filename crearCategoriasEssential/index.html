@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/db59255a97.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logotipos/2.svg"
+      type="image/x-icon"
+    />
+    <title>Crear Categorias</title>
+  </head>
+
+  <body class="flex bg-negro_fuerte custom-scrollbar">
+    <aside class="sidebar animate__animated animate__fadeInLeft">
+      <!-- Sidebar header -->
+      <header class="sidebar-header">
+        <a href="#" class="header-logo bg-blanco rounded-[100%]">
+          <img src="../assets/img/logotipos/3.svg" alt="CodingNepal" />
+        </a>
+        <button class="toggler sidebar-toggler">
+          <span class="material-symbols-rounded">side_navigation</span>
+        </button>
+        <button class="toggler menu-toggler">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </header>
+      <nav class="sidebar-nav">
+        <!-- Primary top nav -->
+        <ul class="nav-list primary-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">home</span>
+
+              <span class="nav-label">Inicio</span>
+            </a>
+            <span class="nav-tooltip">Inicio</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >account_balance</span
+              >
+              <span class="nav-label">Control caja</span>
+            </a>
+            <span class="nav-tooltip">Control caja</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >pivot_table_chart</span
+              >
+              <span class="nav-label">Local virtual</span>
+            </a>
+            <span class="nav-tooltip">Local virtual</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >widget_medium</span
+              >
+              <span class="nav-label">Inventario</span>
+            </a>
+            <span class="nav-tooltip">Inventario</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">group</span>
+              <span class="nav-label">Usuarios</span>
+            </a>
+            <span class="nav-tooltip">Usuarios</span>
+          </li>
+        </ul>
+        <!-- Secondary bottom nav -->
+        <ul class="nav-list secondary-nav">
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >account_circle</span
+              >
+              <span class="nav-label">Mi perfil</span>
+            </a>
+            <span class="nav-tooltip">Mi perfil</span>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="parentCrearProducto">
+      <div class="div1CrearProducto text-blanco p-[15px] custom-scrollbar">
+        <h2 class="text-[30px] font-semibold">Creacion de categorias</h2>
+        <p>En este apartado podras gestionar tus categorias.</p>
+
+        <nav class="text-blanco my-[10px]">
+          <ul>
+            <li>
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Inicio</a
+              >
+              <span class="material-symbols-rounded text-[10px]"
+                >arrow_forward_ios</span
+              >
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Gestor de inventarios</a
+              >
+              <span class="material-symbols-rounded text-[10px]"
+                >arrow_forward_ios</span
+              >
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Crear categorias</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <form action="/meloo" method="post" id="productPreview">
+          <div>
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="idCategoria">ID:</label>
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="idCategoria"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="86055"
+                    name="idCategoria"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="nombreCategoria"
+                  >Nombre categoria:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="nombreCategoria"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder=""
+                    name="nombreCategoria"
+                  />
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="mt-[10px] flex justify-between gap-3 w-full">
+              <div class="w-[100%]">
+                <label class="my-[5px] text-[14px]" for="descripcionCategoria"
+                  >Descripcion:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="descripcionCategoria"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="Describe tu producto"
+                    name="descripcionCategoria"
+                  />
+                </div>
+              </div>
+             
+            </div>
+
+            <h3 class="my-[20px]">Agregar subcategoría para esta categoría:</h3>
+
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="idSubcategoria">ID:</label>
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="idSubcategoria"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="86055"
+                    name="idSubcategoria"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="nombreSubcategoria"
+                  >Nombre subcategoria:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="nombreSubcategoria"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder=""
+                    name="nombreSubcategoria"
+                  />
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="mt-[10px] flex justify-between gap-3 w-full">
+              <div class="w-[100%]">
+                <label class="my-[5px] text-[14px]" for="descripcionSubcategoria"
+                  >Descripcion:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="descripcionSubcategoria"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="Describe tu producto"
+                    name="descripcionSubcategoria"
+                  />
+                </div>
+              </div>
+             
+            </div>
+          </div>
+       
+      </div>
+      <div
+        class="div2CrearProducto p-[15px] text-blanco relative h-[50%]"
+        id="productPreview"
+      >
+        <h3 class="mb-[30px]">Vista previa de tu categoria:</h3>
+        <div class="flex justify-between items-center">
+          <p id="nombreCategoriaPreview" class="text-[25px]">-</p>
+          <p id="" class="text-[14px]">
+            PLU: <span id="idCategoriaPreview">-</span>
+          </p>
+        </div>
+       
+        <div class="my-3 max-w-full h-[auto] overflow-y flex-wrap">
+          <p class="text-[14px]" id="descripcionCategoriaPreview">-</p>
+        </div>
+
+        <div class="flex justify-between items-center text-[12px]">
+          <p id="nombreSubcategoriaPreview">-</p>
+          <p id="" class="text-[14px]">
+            PLU: <span id="idSubcategoriaPreview">-</span>
+          </p>
+        </div>
+        <div class="my-3 max-w-full h-[auto] overflow-y flex-wrap">
+          <p class="text-[14px]" id="descripcionSubcategoriaPreview">-</p>
+        </div>
+        
+        <div class="my-[20px] flex justify-between gap-3 w-full">
+          <div class="w-[100%]">
+            <div class="custom-select">
+              <select id="estadoProducto" name="estadoProducto">
+                <option>Selecciona un estado</option>
+                <option value="Efectivo">Activo</option>
+                <option value="Nequi">Inactivo</option>
+                <option value="Descontinuado">Descontinuado</option>
+              </select>
+              <div class="select-arrow text-blanco"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center gap-4">
+          <button
+            id="confirm-button"
+            class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20"
+            type="submit"
+          >
+            <span class="text-sm">Crear categoria</span>
+            <div
+              class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]"
+            >
+              <div class="relative h-full w-10 bg-white/20"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </form>
+    </div>
+
+    <script src="../assets/js/tailwind.config.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/productos.js" defer></script>
+    <script src="../assets/js/modales.js" defer></script>
+    <script src="../assets/js/hora_calendario.js" defer></script>
+    <script src="../assets/js/semaforo.js" defer></script>
+    <script src="../assets/js/vistaPreviaCategoria.js" defer></script>
+
+    <script></script>
+  </body>
+</html>
