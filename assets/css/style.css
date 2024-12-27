@@ -547,6 +547,8 @@
 .div1Categorizacion {
   grid-area: 1 / 1 / 6 / 4;
   margin: 5px;
+  max-height: 100vh;
+  overflow: scroll;
 }
 .div2Categorizacion {
   grid-area: 1 / 4 / 6 / 6;
