@@ -1,527 +1,647 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/db59255a97.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logotipos/2.svg"
+      type="image/x-icon"
+    />
+    <title>Crear producto</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <script src="https://kit.fontawesome.com/db59255a97.js" crossorigin="anonymous" defer></script>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="shortcut icon" href="../assets/img/logotipos/2.svg" type="image/x-icon" />
-  <title>Crear producto</title>
-</head>
+  <body class="flex bg-negro_fuerte custom-scrollbar">
+    <aside class="sidebar animate__animated animate__fadeInLeft">
+      <!-- Sidebar header -->
+      <header class="sidebar-header">
+        <a href="#" class="header-logo bg-blanco rounded-[100%]">
+          <img src="../assets/img/logotipos/3.svg" alt="CodingNepal" />
+        </a>
+        <button class="toggler sidebar-toggler">
+          <span class="material-symbols-rounded">side_navigation</span>
+        </button>
+        <button class="toggler menu-toggler">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </header>
+      <nav class="sidebar-nav">
+        <!-- Primary top nav -->
+        <ul class="nav-list primary-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">home</span>
 
-<body class="flex bg-negro_fuerte custom-scrollbar">
-  <aside class="sidebar animate__animated animate__fadeInLeft">
-    <!-- Sidebar header -->
-    <header class="sidebar-header">
-      <a href="#" class="header-logo bg-blanco rounded-[100%]">
-        <img src="../assets/img/logotipos/3.svg" alt="CodingNepal" />
-      </a>
-      <button class="toggler sidebar-toggler">
-        <span class="material-symbols-rounded">side_navigation</span>
-      </button>
-      <button class="toggler menu-toggler">
-        <span class="material-symbols-rounded">menu</span>
-      </button>
-    </header>
-    <nav class="sidebar-nav">
-      <!-- Primary top nav -->
-      <ul class="nav-list primary-nav">
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon material-symbols-rounded">home</span>
-
-            <span class="nav-label">Inicio</span>
-          </a>
-          <span class="nav-tooltip">Inicio</span>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon material-symbols-rounded">account_balance</span>
-            <span class="nav-label">Control caja</span>
-          </a>
-          <span class="nav-tooltip">Control caja</span>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon material-symbols-rounded">pivot_table_chart</span>
-            <span class="nav-label">Local virtual</span>
-          </a>
-          <span class="nav-tooltip">Local virtual</span>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon material-symbols-rounded">widget_medium</span>
-            <span class="nav-label">Inventario</span>
-          </a>
-          <span class="nav-tooltip">Inventario</span>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon material-symbols-rounded">group</span>
-            <span class="nav-label">Usuarios</span>
-          </a>
-          <span class="nav-tooltip">Usuarios</span>
-        </li>
-      </ul>
-      <!-- Secondary bottom nav -->
-      <ul class="nav-list secondary-nav">
-        <li class="nav-item"></li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <span class="nav-icon material-symbols-rounded">account_circle</span>
-            <span class="nav-label">Mi perfil</span>
-          </a>
-          <span class="nav-tooltip">Mi perfil</span>
-        </li>
-      </ul>
-    </nav>
-  </aside>
-
-  <div class="parentCategorizacion">
-    <div class="div1Categorizacion text-blanco p-[15px]">
-      <h2 class="text-[30px] font-semibold">Creacion de productos</h2>
-      <p>En este apartado podras gestionar tus productos.</p>
-
-      <nav class="text-blanco my-[10px]">
-        <ul>
-          <li>
-            <a href="" class="hover:text-rojo transition-all font-semibold">Inicio</a>
-            <span class="material-symbols-rounded text-[10px]">arrow_forward_ios</span>
-            <a href="" class="hover:text-rojo transition-all font-semibold">Gestor de inventarios</a>
-            <span class="material-symbols-rounded text-[10px]">arrow_forward_ios</span>
-            <a href="" class="hover:text-rojo transition-all font-semibold">Crear productos</a>
+              <span class="nav-label">Inicio</span>
+            </a>
+            <span class="nav-tooltip">Inicio</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >account_balance</span
+              >
+              <span class="nav-label">Control caja</span>
+            </a>
+            <span class="nav-tooltip">Control caja</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >pivot_table_chart</span
+              >
+              <span class="nav-label">Local virtual</span>
+            </a>
+            <span class="nav-tooltip">Local virtual</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >widget_medium</span
+              >
+              <span class="nav-label">Inventario</span>
+            </a>
+            <span class="nav-tooltip">Inventario</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">group</span>
+              <span class="nav-label">Usuarios</span>
+            </a>
+            <span class="nav-tooltip">Usuarios</span>
+          </li>
+        </ul>
+        <!-- Secondary bottom nav -->
+        <ul class="nav-list secondary-nav">
+          <li class="nav-item"></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span class="nav-icon material-symbols-rounded"
+                >account_circle</span
+              >
+              <span class="nav-label">Mi perfil</span>
+            </a>
+            <span class="nav-tooltip">Mi perfil</span>
           </li>
         </ul>
       </nav>
+    </aside>
 
-      <div>
-        <div class="mt-[20px] flex justify-between gap-3 w-full">
-          
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">ID:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
+    <div class="parentCategorizacion">
+      <div class="div1Categorizacion text-blanco p-[15px]">
+        <h2 class="text-[30px] font-semibold">Creacion de productos</h2>
+        <p>En este apartado podras gestionar tus productos.</p>
+
+        <nav class="text-blanco my-[10px]">
+          <ul>
+            <li>
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Inicio</a
               >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Nombre producto:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
+              <span class="material-symbols-rounded text-[10px]"
+                >arrow_forward_ios</span
               >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Categoria Producto:</p>
-            <div class="custom-select">
-              <select>
-                <option>Selecciona una categoria</option>
-                <option>Efectivo</option>
-                <option>Nequi</option>
-                <option>Daviplata</option>
-                <option>Tarjeta</option>
-              </select>
-              <div class="select-arrow text-blanco"></div>
-            </div>
-          </div>
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Subcategoria producto:</p>
-            <div class="custom-select">
-              <select>
-                <option>Selecciona una subcategoria</option>
-                <option>Efectivo</option>
-                <option>Nequi</option>
-                <option>Daviplata</option>
-                <option>Tarjeta</option>
-              </select>
-              <div class="select-arrow text-blanco"></div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="mt-[10px] flex justify-between gap-3 w-full">
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Descripcion:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Gestor de inventarios</a
               >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Stock actual:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
+              <span class="material-symbols-rounded text-[10px]"
+                >arrow_forward_ios</span
               >
+              <a href="" class="hover:text-rojo transition-all font-semibold"
+                >Crear productos</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
+        <form action="/meloo" method="post" id="productPreview">
+          <div>
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="idProducto">ID:</label>
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="idProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="86055"
+                    name="idProducto"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="nombreProducto"
+                  >Nombre producto:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="nombreProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder=""
+                    name="nombreProducto"
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-          
-        </div>
 
-        <p class="mt-[15px] text-[14px]">Unidad de medida:</p>
+            <div class="mt-[10px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="categoriaProducto"
+                  >Categoria Producto:</label
+                >
+                <div class="custom-select">
+                  <select id="categoriaProducto" name="categoriaProducto">
+                    <optgroup label="Selecciona una categoria"></optgroup>
+                    <option value="categoria 1">cat 1</option>
+                    <option value="categoria 2">cat 2</option>
+                  </select>
+                  <div class="select-arrow text-blanco"></div>
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="subcategoriaProducto"
+                  >Subcategoria producto:</label
+                >
+                <div class="custom-select">
+                  <select id="subcategoriaProducto" name="subcategoriaProducto">
+                    <optgroup label="Selecciona una subcategoria"></optgroup>
+                    <option value="sub1">sub1</option>
+                    <option value="sub2">sub2</option>
+                    <option value="sub3">sub3</option>
+                    <option value="sub4">sub4</option>
+                  </select>
+                  <div class="select-arrow text-blanco"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-[10px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="descripcionProducto"
+                  >Descripcion:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
 
-        <div class="flex items-center gap-[10px] my-[5px]">
-          
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Unidades</span>
-              </span>
-            </label>
+                  <input
+                    type="text"
+                    id="descripcionProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="Describe tu producto"
+                    name="descripcionProducto"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="stockProducto"
+                  >Stock actual:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="stockProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="Cantidad existente"
+                    name="stockProducto"
+                  />
+                </div>
+              </div>
+            </div>
+
+
+            <label class="mt-[30px] text-[14px]" for="unidadMedidaProducto"
+              >Unidad de medida:</label
+            >
+
+            <div class="flex items-center gap-[10px] my-[5px]">
+              <div class="checkbox-wrapper-16">
+                <label class="checkbox-wrapper">
+                  <input class="checkbox-input" type="checkbox" value="Unidades" name="unidadMedidaProducto"/>
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Unidades</span>
+                  </span>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-16">
+                <label class="radio-wrapper">
+                  <input
+                    class="checkbox-input"
+                    type="checkbox"
+                    name="unidadMedidaProducto"
+                    value="Litros"
+                  />
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Litros</span>
+                  </span>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-16">
+                <label class="checkbox-wrapper">
+                  <input
+                    class="checkbox-input"
+                    type="checkbox"
+                    name="unidadMedidaProducto"
+                    value="Mililitros"
+                  />
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Mililitros</span>
+                  </span>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-16">
+                <label class="checkbox-wrapper">
+                  <input
+                    class="checkbox-input"
+                    type="checkbox"
+                    name="unidadMedidaProducto"
+                    value="Kilos"
+                  />
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Kilos</span>
+                  </span>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-16">
+                <label class="checkbox-wrapper">
+                  <input
+                    class="checkbox-input"
+                    type="checkbox"
+                    name="unidadMedidaProducto"
+                    value="Gramos"
+                  />
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Gramos</span>
+                  </span>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-16">
+                <label class="checkbox-wrapper">
+                  <input
+                    class="checkbox-input"
+                    type="checkbox"
+                    name="unidadMedidaProducto"
+                    value="Onzas"
+                  />
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Onzas</span>
+                  </span>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-16">
+                <label class="checkbox-wrapper">
+                  <input
+                    class="checkbox-input"
+                    type="checkbox"
+                    name="unidadMedidaProducto"
+                    value="Metros"
+                  />
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Metros</span>
+                  </span>
+                </label>
+              </div>
+              <div class="checkbox-wrapper-16">
+                <label class="checkbox-wrapper">
+                  <input
+                    class="checkbox-input"
+                    type="checkbox"
+                    name="unidadMedidaProducto"
+                    value="Centimetros"
+                  />
+                  <span class="checkbox-tile">
+                    <span class="checkbox-label">Centímetros</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="w-[50%]">
+              <label
+                class="my-[5px] text-[14px]"
+                for="valorUnidadMedidaProducto"
+                >Ingrese un valor:</label
+              >
+              <div
+                class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+              >
+                <span
+                  class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                  >format_italic</span
+                >
+
+                <input
+                  type="text"
+                  id="valorUnidadMedidaProducto"
+                  class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                  placeholder=""
+                  name="valorUnidadMedidaProducto"
+                />
+              </div>
+            </div>
+
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="precioNetoProducto"
+                  >Precio neto:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="precioNetoProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="$1000"
+                    name="precioNetoProducto"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="precioFinalProducto"
+                  >Precio final:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="precioFinalProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="$2000"
+                    name="precioFinalProducto"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label
+                  class="my-[5px] text-[14px]"
+                  for="precioMayoristaProducto"
+                  >Precio mayorista:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="precioMayoristaProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="$800"
+                    name="precioMayoristaProducto"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="impuestoProducto"
+                  >Impuesto %:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="impuestoProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="$450"
+                    name="impuestoProducto"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="loteProducto"
+                  >Lote:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="loteProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="447788"
+                    name="loteProducto"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label
+                  class="my-[5px] text-[14px]"
+                  for="fechaVencimientoProducto"
+                  >Fecha vencimiento:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="date"
+                    id="fechaVencimientoProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder=""
+                    name="fechaVencimientoProducto"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="mt-[20px] flex justify-between gap-3 w-full">
+              <div class="w-[50%]">
+                <label
+                  class="my-[5px] text-[14px]"
+                  for="registroSanitarioProducto"
+                  >Registro sanitario:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="registroSanitarioProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="RSA-123"
+                    name="registroSanitarioProducto"
+                  />
+                </div>
+              </div>
+              <div class="w-[50%]">
+                <label class="my-[5px] text-[14px]" for="proveedorProducto"
+                  >Proveedor:</label
+                >
+                <div
+                  class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
+                >
+                  <span
+                    class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
+                    >format_italic</span
+                  >
+
+                  <input
+                    type="text"
+                    id="proveedorProducto"
+                    class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
+                    placeholder="Jhoann Zamudio"
+                    name="proveedorProducto"
+                  />
+                </div>
+              </div>
+            </div>
+
+            
           </div>
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Litros</span>
-              </span>
-            </label>
-          </div>
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Mililitros</span>
-              </span>
-            </label>
-          </div>
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Kilos</span>
-              </span>
-            </label>
-          </div>
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Gramos</span>
-              </span>
-            </label>
-          </div>
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Onzas</span>
-              </span>
-            </label>
-          </div>
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Metros</span>
-              </span>
-            </label>
-          </div>
-          <div class="checkbox-wrapper-16">
-            <label class="checkbox-wrapper">
-              <input class="checkbox-input" type="checkbox" />
-              <span class="checkbox-tile">
-                <span class="checkbox-label">Centimetros</span>
-              </span>
-            </label>
-          </div>
-          
-        </div>
-        <div class="w-[50%]">
-          <p class="my-[5px] text-[14px]">Ingrese un valor:</p>
-          <div
-          class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
        
+      </div>
+      <div
+        class="div2Categorizacion p-[15px] text-blanco relative h-[65%]"
+        id="productPreview"
+      >
+        <h3 class="mb-[30px]">Vista previa de tu producto:</h3>
+        <div class="flex justify-between items-center">
+          <p id="nombreProductoPreview" class="text-[25px]">-</p>
+          <p id="" class="text-[14px]">
+            PLU: <span id="idProductoPreview">-</span>
+          </p>
+        </div>
+        <div class="flex justify-between items-center text-[12px]">
+          <p id="categoriaProductoPreview">-</p>
+          <p id="subcategoriaProductoPreview">-</p>
+          <div
+            class="border-blanco_opacidad border p-2 rounded-xl w-[auto] flex items-center gap-1"
           >
-            <span
-              class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-              >format_italic</span
-            >
-
-            <input
-              type="text"
-              id="monto"
-              class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-              placeholder=""
-              name="monto"
-            />
+            <p id="stockProductoPreview">-</p>
+            <span> Stock</span>
           </div>
         </div>
-
-        <div class="mt-[20px] flex justify-between gap-3 w-full">
-          
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Precio neto:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
+        <div class="flex items-center gap-2 text-[14px]">
+          <p id="valorUnidadMedidaProductoPreview">-</p>
+          <p id="unidadMedidaProductoPreview">-</p>
+        </div>
+        <div class="my-3 max-w-full h-[auto] overflow-y flex-wrap">
+          <p class="text-[14px]" id="descripcionProductoPreview">-</p>
+        </div>
+        <div>
+          <div
+            class="w-[100%] transition-all p-[3px] flex items-center gap-[8px] text-[20px]"
+          >
+            <span class="material-symbols-rounded text-rojo text-[25px]"
+              >payment</span
             >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
 
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
+            <p class="number">
+              $ <span id="precioFinalProductoPreview">-</span> COP
+            </p>
           </div>
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Precio final:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
+        </div>
+        <div class="flex justify-between items-center text-[12px]">
+          <p>Lote: <span id="loteProductoPreview">-</span></p>
+          <p>Proveedor: <span id="proveedorProductoPreview">-</span></p>
+        </div>
+        <div class="flex justify-between items-center text-[12px]">
+          <p>
+            Registro Sanitario:
+            <span id="registroSanitarioProductoPreview">-</span>
+          </p>
+          <p>
+            Fecha vencimiento:
+            <span id="fechaVencimientoProductoPreview">-</span>
+          </p>
+        </div>
+        <div class="my-[20px] flex justify-between gap-3 w-full">
+          <div class="w-[100%]">
+            <div class="custom-select">
+              <select id="estadoProducto" name="estadoProducto">
+                <option>Selecciona un estado</option>
+                <option value="Efectivo">Activo</option>
+                <option value="Nequi">Inactivo</option>
+                <option value="Descontinuado">Descontinuado</option>
+              </select>
+              <div class="select-arrow text-blanco"></div>
             </div>
           </div>
         </div>
-        <div class="mt-[20px] flex justify-between gap-3 w-full">
-          
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Precio mayorista:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Impuesto %:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="mt-[20px] flex justify-between gap-3 w-full">
-          
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Lote:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Fecha vencimiento:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="mt-[20px] flex justify-between gap-3 w-full">
-          
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Registro sanitario:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-          <div class="w-[50%]">
-            <p class="my-[5px] text-[14px]">Proveedor:</p>
-            <div
-            class="w-[100%] transition-all rounded-[5px] border-[1px] border-blanco_opacidad p-[3px] flex items-center gap-[8px]"
-         
-            >
-              <span
-                class="material-symbols-rounded text-rojo text-[20px] pl-[5px]"
-                >format_italic</span
-              >
-
-              <input
-                type="text"
-                id="monto"
-                class="w-full focus:outline-none focus:border-none font-normal bg-negro_fuerte text-blanco"
-                placeholder=""
-                name="monto"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="flex items-center space-x-3 mt-[10px]">
-          <label class="group flex items-center cursor-pointer">
-            <input class="hidden peer" type="checkbox" />
-
-            <span
-              class="relative w-4 h-4 flex justify-center items-center bg-gray-100 border-2 border-gray-400 rounded-md shadow-md transition-all duration-500 peer-checked:border-rojo peer-checked:bg-rojo peer-hover:scale-105"
-            >
-              <span
-                class="absolute inset-0 bg-gradient-to-br from-white/30 to-white/10 opacity-0 peer-checked:opacity-100 rounded-md transition-all duration-500 peer-checked:animate-pulse"
-              ></span>
-
-              <svg
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                class="hidden w-5 h-5 text-white peer-checked:block transition-transform duration-500 transform scale-50 peer-checked:scale-100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  clip-rule="evenodd"
-                  d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 10-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
-                  fill-rule="evenodd"
-                ></path>
-              </svg>
-            </span>
-
-            <span
-              class="ml-3 text-[12px] text-blanco font-medium transition-colors duration-300"
-            >
-              Imprimir recibo de compra.
-            </span>
-          </label>
-        </div>
-        
-
-        <div class="flex justify-start gap-4">
+        <div class="flex justify-center gap-4">
           <button
             id="confirm-button"
-            class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20 mt-[20px]"
+            class="group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-rojo backdrop-blur-lg px-10 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-600/50 border border-white/20"
             type="submit"
           >
-            <span class="text-sm">Confirmar orden</span>
+            <span class="text-sm">Crear producto</span>
             <div
               class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover/button:duration-1000 group-hover/button:[transform:skew(-13deg)_translateX(100%)]"
             >
@@ -530,25 +650,17 @@
           </button>
         </div>
       </div>
-
-
-
-    </div>
-    <div class="div2Categorizacion p-[15px] text-blanco relative h-[50%]">
-     
+    </form>
     </div>
 
-  </div>
+    <script src="../assets/js/tailwind.config.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/productos.js" defer></script>
+    <script src="../assets/js/modales.js" defer></script>
+    <script src="../assets/js/hora_calendario.js"></script>
+    <script src="../assets/js/semaforo.js"></script>
+    <script src="../assets/js/vistaPrevia.js"></script>
 
-
-  <script src="../assets/js/tailwind.config.js" defer></script>
-  <script src="../assets/js/main.js" defer></script>
-  <script src="../assets/js/productos.js" defer></script>
-  <script src="../assets/js/modales.js" defer></script>
-  <script src="../assets/js/hora_calendario.js"></script>
-  <script src="../assets/js/semaforo.js"></script>
-
-  <script></script>
-</body>
-
+    <script></script>
+  </body>
 </html>

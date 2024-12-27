@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggler = document.querySelector(".menu-toggler");
   // Ensure these heights match the CSS sidebar height values
   let collapsedSidebarHeight = "56px"; // Height in mobile view (collapsed)
-  let fullSidebarHeight = "calc(100vh - 3px)"; // Height in larger screen
+  let fullSidebarHeight = "auto"; // Height in larger screen
   // Toggle sidebar's collapsed state
   sidebarToggler.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");
